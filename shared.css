@@ -1,0 +1,164 @@
+body {
+  font-family: "Heebo", sans-serif;
+  background: linear-gradient(45deg, rgb(38, 36, 36), rgb(50, 46, 46));
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+#main-header {
+  background-color: rgb(37, 34, 29);
+  padding: 0 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  height: 5rem;
+  align-items: center;
+}
+
+#logo {
+  color: orange;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.menu-btn {
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  display: none;
+}
+.menu-btn span {
+  width: 100%;
+  height: 2px;
+  background-color: orange;
+}
+
+#main-header ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#main-header li {
+  margin: 0 1rem;
+}
+
+#main-header nav a {
+  color: orange;
+  font-size: 1rem;
+  font-weight: lighter;
+}
+
+#main-header nav a:hover {
+  color: rgb(177, 117, 4);
+}
+
+#side-drawer {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(28, 25, 25);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+#side-drawer:target {
+  display: block;
+}
+
+#side-drawer header {
+  padding: 0 1.25rem;
+  display: flex;
+  justify-content: flex-end;
+  height: 5rem;
+  align-items: center;
+}
+
+#side-drawer ul {
+  margin: 0;
+  padding: 4rem 1rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#side-drawer li {
+  margin: 1rem 0;
+}
+
+#side-drawer a {
+  color: rgb(243, 217, 217);
+  font-size: 2rem;
+}
+
+main h1 {
+  color: orange;
+  font-size: 3rem;
+  text-align: center;
+}
+
+#latest-products {
+  width: 80%;
+  margin: 2rem auto;
+}
+
+#latest-products ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  list-style: none;
+}
+
+.food-item {
+  background-color: rgb(244, 223, 191);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.food-item img {
+  height: 15rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.food-item-content {
+  text-align: center;
+  padding: 12px;
+  color: black;
+}
+
+.btn {
+  background-color: orange;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 6px;
+}
+
+.btn:hover {
+  background-color: rgb(177, 117, 4);
+}
+
+@media (max-width: 48rem) {
+  #main-header nav {
+    display: none;
+  }
+
+  .menu-btn{
+    display: flex;
+  }
+
+  main h1 {
+    font-size: 1.5rem;
+  }
+
+  #latest-products ul {
+    grid-template-columns: 100%;
+  }
+}
